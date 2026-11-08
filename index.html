@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yapılacaklar</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Yapılacak Görevler</h1>
+
+    <!-- Yeni görev ekleme formu -->
+    <form id="new-form" class="new">
+      <input id="new-title" type="text" placeholder="Yeni görev yaz ve Enter'a bas" maxlength="200" autocomplete="off" required>
+      <button type="submit">Ekle</button>
+    </form>
+
+    <!-- Filtre düğmeleri -->
+    <nav class="filters" aria-label="Filtre">
+      <button type="button" data-filter="all" class="active">Tümü</button>
+      <button type="button" data-filter="open">Yapılacak</button>
+      <button type="button" data-filter="done">Tamamlanan</button>
+    </nav>
+
+    <!-- Görev listesi: app.js burayı doldurur -->
+    <ul id="list" class="list"></ul>
+
+    <p id="empty" class="empty" hidden>Burada görev yok.</p>
+    <p id="error" class="error" role="alert" hidden></p>
+
+    <footer class="foot">
+      <span id="count"></span>
+      <span class="hint">Düzenlemek için göreve çift tıkla</span>
+    </footer>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
