@@ -1,7 +1,7 @@
 # To-do uygulaması (FastAPI + SQLite + JavaScript)
 
 Görev ekleme, tamamlandı olarak işaretleme, düzenleme (çift tık), silme ve filtreleme yapan basit bir web uygulaması.
-Backend Python/FastAPI ile yazıldı, veriler SQLite veritabanında (`todos.db`) tutuluyor. Frontend düz HTML, CSS ve JavaScript.
+Backend Python/FastAPI ile yazıldı, veriler SQLite veritabanında (`todos.db`) tutuluyor. Frontend HTML, CSS ve JavaScript.
 
 ## Klasör yapısı
 
@@ -18,7 +18,7 @@ todo-app/
 
 ## Bilgisayarında çalıştırma (Windows)
 
-1. Python 3.10 veya üstü kurulu olmalı. Terminalde `python --version` yaz. Yoksa python.org'dan indir ve kurulumda **Add python.exe to PATH** kutusunu işaretle.
+1. Python 3.10 veya üstü kurulu olmalı. Yoksa python.org'dan indir ve kurulumda **Add python.exe to PATH** kutusunu işaretle.
 2. `todo-app` klasörünü VS Code ile aç (**File → Open Folder**).
 3. VS Code'da **Terminal → New Terminal** aç ve sırayla yaz:
 
@@ -50,9 +50,3 @@ Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 | PATCH | `/api/todos/{id}` | Görevi günceller. Gövde: `{"done": true}` veya `{"title": "..."}` |
 | DELETE | `/api/todos/{id}` | Görevi siler |
 
-## Kendini geliştirmek için ek görevler
-
-1. Görevlere son tarih (`due_date`) alanı ekle ve geciken görevleri kırmızı göster.
-2. "Tamamlananları temizle" düğmesi ekle (yeni bir `DELETE /api/todos?done=true` uç noktası gerekir).
-3. `pytest` ile API için test yaz (FastAPI'nin `TestClient`'ı ile).
-4. Görevleri sürükle bırak ile sıralanabilir yap.
